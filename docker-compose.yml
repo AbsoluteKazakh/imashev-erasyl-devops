@@ -1,0 +1,13 @@
+services:
+  student-app:
+    build: .
+    image: imashev-erasyl-devops
+    container_name: imashev-erasyl-compose
+    ports:
+      - "8081:8080"
+    environment:
+      STUDENT_NAME: Erasyl
+      STUDENT_SURNAME: Imashev
+      STUDENT_GROUP: IT2-2301
+      STUDENT_ID: "37792"
+    restart: unless-stopped
